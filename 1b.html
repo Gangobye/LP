@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+            background-color: #53b4a7;
+            padding: 50px;
+            margin-top: 50px;
+            width: 50%;
+            font-size: medium;
+        }
+    </style>
+    
+    <script>
+        function submit_data() {
+            let name = document.getElementById(`name`).value;
+            let email = document.getElementById(`email`).value;
+            let pass = document.getElementById(`pass`).value;
+            //localStorage.setItem(`name`, name);
+            //localStorage.setItem(`email`, email);
+            //localStorage.setItem(`pass`, pass);
+            let user = JSON.parse(localStorage.getItem(`user`) || "[]");
+
+
+            if (user.some(p => p.email === email)) {
+                alert("Duplicate Data");
+            } else {
+                user.push({
+                    "name": name,
+                    "email": email,
+                    "pass": pass
+                });
+                localStorage.setItem("user", JSON.stringify(user));
+            }
+        }
+    </script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <h1>Create Account</h1><br>
+            <div class="card">
+                <label for="Name">Name</label><br>
+                <input type="text" class="input-field" placeholder="Name" id="name" required><br><br>
+                <label for="Email">Email</label><br>
+                <input type="email" class="input-field" placeholder="Email" id="email" required><br><br>
+                <label for="Password">Password</label><br>
+                <input type="password" class="input-field" placeholder="Password" id="pass" required><br><br>
+                <button type="submit" class="btn btn-primary" onclick="submit_data()">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

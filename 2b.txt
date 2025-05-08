@@ -1,0 +1,19 @@
+docker ps
+docke pull openjdk
+docker image
+docker images
+docker run --name java -it -d openjdk
+docker ps
+docker exec -it java jshell
+docker container rm a85fa8cae35c			//gives error
+docker stop a85fa8cae35c
+docker container rm a85fa8cae35c
+docker image prune
+
+
+
+
+wsl error
+open windows powershell as admin
+wsl -l -o
+wsl --install -d Ubuntu-24.04

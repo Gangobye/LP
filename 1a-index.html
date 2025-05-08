@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="d-flex"> <!--to display sidebar and main content sidebyside-->
+        <!-- Sidebar -->
+        <div class="bg-dark text-white p-3" style="width: 200px; height: 100vh;">
+            <h3 class="text-center">Student</h3>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link text-primary">Dashboard</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link text-white">Login</a></li>
+                <li class="nav-item"><a href="register.html" class="nav-link text-white">Register</a></li>
+                <li class="nav-item"><a href="logout.html" class="nav-link text-white">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 p-4">
+            <div>
+                <h2>Welcome, Aayush!</h2>
+                <hr>
+            </div>
+            <div class="row mt-4"> <!--creates a row with topmargin=4-->
+
+                <div class="col-md-4"> <!--lets the content of row occ 4 cols (outof 12)-->
+                    <div class="card  bg-primary mb-3 text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Courses</h5>
+                            <p class="card-text">4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Attendance</h5>
+                            <p class="card-text">85%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Current GPA</h5>
+                            <p class="card-text">8.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

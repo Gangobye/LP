@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <input type="text" #name placeholder="Enter Name" name="Name"><br>
+    <input type="text" #address placeholder="Enter Address" name="Address"><br>
+    <input type="text" #email placeholder="Enter Email" name="Email"><br>
+    <input type="text" #contact placeholder="Enter Contact" name="Contact"><br>
+    <input type="password" #password placeholder="Enter Password" name="Password"><br>
+    <button (click)="getvalue(name.value,address.value,contact.value,email.value)">Submit</button>
+  
+      <h1>Your Registration Details:</h1>
+      <p>Name: {{displayname}}</p>
+      <p>Address: {{displayaddress}}</p>
+      <p>Email: {{displayemail}}</p>
+      <p>Contact: {{displaycontact}}</p>
+  </div>
+
+
+
+<!-- npm install -g @angular/cli -->
+<!-- ng new partc -->
+<!-- cd partc -->
+<!-- ng serve --open -->

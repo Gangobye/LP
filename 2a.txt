@@ -1,0 +1,7 @@
+git --version    //This checks which version of Git is installed on your computer.
+git init	 //   This starts a new Git repository in your current folder."Begin tracking changes in this folder with Git."
+git add . 	 // This stages all your files to be included in the next commit. "Prepare all files here for saving."
+git status  	 //This shows what's going on with your files—what’s new, what’s changed, and what’s ready to be committed.
+git remote add origin (link)   //This connects your local Git project to a remote GitHub (or other Git) repository.   
+git commit -m "first commit"     // This saves your staged changes with a message describing what you did.
+git push -u origin master  	//  This sends your code to the remote repo for the first time and sets the default push location.
